@@ -76,6 +76,40 @@
         "eh_novidade": true
       },
       "id": 2
+    },
+    {
+      "nome": "Hugo",
+      "ponto": "pontoCarne",
+      "bebidas": [
+        {
+          "id": 2,
+          "nome": "Shweppes Citrus 310 ml",
+          "descricao": "",
+          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16966989566521924cc9418_75_75.jpeg",
+          "valor": 6,
+          "eh_novidade": false
+        }
+      ],
+      "complemento": [
+        {
+          "id": 2,
+          "nome": "Batata ondulada sequinha e crocante temperada com lemon pepper",
+          "descricao": "",
+          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431513651d7d99094b6_75_75.jpeg",
+          "valor": 7,
+          "eh_novidade": false
+        }
+      ],
+      "burguer": {
+        "id": 1,
+        "nome": "Diretoria Alterado",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429768651d76c8124dc_75_75.jpeg",
+        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, tomate grelhado e defumado na brasa, suculento blend de 160 gramas, queijo derretido na brasa, molho suave de gorgonzola coberto de crispy de alho poró.",
+        "valor": 35,
+        "eh_novidade": true
+      },
+      "statusId": 5,
+      "id": 3
     }
   ],
   "opcionais": {
