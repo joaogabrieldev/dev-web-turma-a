@@ -3,6 +3,7 @@
     <NavBarComponent />
     <BannerCompanent/>
     <router-view />
+    
   </div>
 </template>
 <script>
@@ -13,7 +14,9 @@ export default {
   name: "App",
   components: {
     NavBarComponent,
-    BannerCompanent
+    BannerCompanent,
+    
+    
   },
 };
 </script>
