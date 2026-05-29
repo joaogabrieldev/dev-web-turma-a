@@ -1,19 +1,20 @@
-//APP VIEW
-
 <template>
   <div>
-  <NavBarComponent />
-  <router-view />
+    <NavBarComponent />
+    <BannerComponent />
+    <router-view />
   </div>
 </template>
 <script>
-import NavBarComponent from './components/NavBarComponent.vue';
-  export default {
-    name: "App",
-    components: {
-      NavBarComponent,
-    },
-  }
+import NavBarComponent from "./components/NavBarComponent.vue";
+import BannerComponent from "./components/BannerComponent.vue";
+export default {
+  name: "App",
+  components: {
+    NavBarComponent,
+    BannerComponent,
+  },
+};
 </script>
 <style>
 #app {
