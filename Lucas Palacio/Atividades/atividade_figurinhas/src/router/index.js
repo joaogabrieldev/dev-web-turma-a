@@ -1,12 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import FigurinhasComponent from '@/components/FigurinhasComponent.vue'
 
-// Adicione aqui outras views que você quiser manter no projeto
-// import MenuView from '@/views/MenuView.vue'
 
 const routes = [
   // Rota principal — pode apontar para FigurinhasComponent direto
-  // ou para uma MenuView se quiser uma página de início separada
+  
   {
     path: '/',
     name: 'home',

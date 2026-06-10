@@ -53,7 +53,7 @@
 </template>
 
 <script>
-// ⚠️ Coloque aqui a sua chave da API gerada no api-football.com
+// Coloque aqui a sua chave da API gerada no api-football.com
 const TOKEN = 'd31b64836034ee4a236746de3dc2f640'
 
 export default {
@@ -68,12 +68,6 @@ export default {
       mensagemErro: null,    // guarda mensagem de erro se acontecer
     }
   },
-
-  // mounted() é chamado quando o componente é criado na tela
-  mounted() {
-    this.carregarPaises()
-  },
-
   methods: {
 
     // 1ª requisição: busca todos os países disponíveis na API
@@ -98,7 +92,7 @@ export default {
 
     // Chamado quando o usuário muda o dropdown
     async carregarFigurinhas() {
-      // Se não selecionou nada, limpa e sai
+      
       if (!this.paisSelecionado) {
         this.jogadores = []
         return
@@ -169,7 +163,14 @@ export default {
     usarFotoReserva(event) {
       event.target.src = 'https://media.api-sports.io/football/players/0.png'
     }
-  }
+  },
+
+  // mounted() é chamado quando o componente é criado na tela
+  mounted() {
+    this.carregarPaises()
+  },
+
+  
 }
 </script>
 
