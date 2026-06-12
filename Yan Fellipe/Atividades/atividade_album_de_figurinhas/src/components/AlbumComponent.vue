@@ -58,7 +58,7 @@
  
 <script>
  
-const API_KEY = '62393d9516fee54c7b90756b77b63468';
+const API_KEY = 'c56ac03e7e577beeb9e020711a2996c4';
  
 export default {
   name: 'AlbumComponent',
