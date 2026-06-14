@@ -1,0 +1,11 @@
+{
+  "response": [
+    {
+      "team": {
+        "id": 6,
+        "name": "Brazil",
+        "logo": "https://media.api-sports.io/football/teams/6.png"
+      }
+    }
+  ]
+}

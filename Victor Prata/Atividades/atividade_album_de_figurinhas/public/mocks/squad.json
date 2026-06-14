@@ -1,0 +1,12 @@
+{
+  "response": [
+    {
+      "players": [
+        { "id": 10, "name": "Neymar Jr", "position": "Attacker", "photo": "https://placehold.co/150x150/d4af37/white?text=Neymar" },
+        { "id": 20, "name": "Vinícius Júnior", "position": "Attacker", "photo": "https://placehold.co/150x150/d4af37/white?text=Vini+Jr" },
+        { "id": 30, "name": "Casemiro", "position": "Midfielder", "photo": "https://placehold.co/150x150/d4af37/white?text=Casemiro" },
+        { "id": 50, "name": "Alisson", "position": "Goalkeeper", "photo": "https://placehold.co/150x150/d4af37/white?text=Alisson" }
+      ]
+    }
+  ]
+}
