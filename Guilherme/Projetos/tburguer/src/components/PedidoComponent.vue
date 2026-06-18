@@ -144,7 +144,6 @@
 <script>
 import AlertaComponent from "@/components/AlertaComponent.vue";
 
-const API = process.env.VUE_APP_API_BASE_URL || "http://localhost:3000";
 
 export default {
   name: "PedidoComponent",
@@ -175,11 +174,11 @@ export default {
   },
   methods: {
     async getTamanhos() {
-      const res = await fetch(`${API}/tipos_tamanho`);
+      const res = await fetch(`${this.$apiUrl}/tipos_tamanho`);
       this.listaTamanhos = await res.json();
     },
     async getOpcionais() {
-      const res = await fetch(`${API}/opcionais`);
+      const res = await fetch(`${this.$apiUrl}/opcionais`);
       const dados = await res.json();
       this.listaAcompanhamentos = dados.acompanhamentos;
       this.listaBebidas = dados.bebidas;
@@ -229,7 +228,7 @@ export default {
         statusId: 6,
       };
       try {
-        const req = await fetch(`${API}/pedidos`, {
+        const req = await fetch(`${this.$apiUrl}/pedidos`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(dadosPedido),

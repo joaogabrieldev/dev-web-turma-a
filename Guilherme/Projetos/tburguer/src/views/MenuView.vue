@@ -28,7 +28,6 @@
 </template>
 
 <script>
-const API = process.env.VUE_APP_API_BASE_URL || "http://localhost:3000";
 
 export default {
   name: "MenuView",
@@ -40,7 +39,7 @@ export default {
   methods: {
     async consultarMenu() {
       try {
-        const response = await fetch(`${API}/menu`);
+        const response = await fetch(`${this.$apiUrl}/menu`);
         const dados = await response.json();
         this.listaMenuCafes = [
           ...(dados.especiais || []),

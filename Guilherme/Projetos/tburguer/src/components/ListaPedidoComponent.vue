@@ -95,7 +95,6 @@
 <script>
 import AlertaComponent from "@/components/AlertaComponent.vue";
 
-const API = process.env.VUE_APP_API_BASE_URL || "http://localhost:3000";
 
 export default {
   name: "ListaPedidoComponent",
@@ -111,7 +110,7 @@ export default {
   methods: {
     async consultarPedidos() {
       try {
-        const response = await fetch(`${API}/pedidos`);
+        const response = await fetch(`${this.$apiUrl}/pedidos`);
         const dados = await response.json();
         this.listaPedidosRealizados = dados;
       } catch {
@@ -119,7 +118,7 @@ export default {
       }
     },
     async consultarStatusPedido() {
-      const response = await fetch(`${API}/status_pedido`);
+      const response = await fetch(`${this.$apiUrl}/status_pedido`);
       this.listaStatusPedido = await response.json();
     },
     confirmarExclusao(pedido) {
@@ -136,7 +135,7 @@ export default {
     },
     async deletarPedido(id) {
       try {
-        const response = await fetch(`${API}/pedidos/${id}`, {
+        const response = await fetch(`${this.$apiUrl}/pedidos/${id}`, {
           method: "DELETE",
         });
         if (!response.ok) throw new Error();
@@ -152,7 +151,7 @@ export default {
     async atualizarStatusPedido(event, idPedido) {
       const idPedidoAtualizado = Number(event.target.value);
       try {
-        const response = await fetch(`${API}/pedidos/${idPedido}`, {
+        const response = await fetch(`${this.$apiUrl}/pedidos/${idPedido}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ statusId: idPedidoAtualizado }),
