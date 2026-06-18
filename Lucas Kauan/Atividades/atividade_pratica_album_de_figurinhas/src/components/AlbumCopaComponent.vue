@@ -44,7 +44,7 @@ export default {
   name: 'AlbumCopaComponent',
   data() {
     return {
-      token: '5bbd44e558a1b6c54bbb44175e15d4c6',
+      token: 'cdee437d31df9aa4eb2fcf9da8630a9e',
       listaDePaises: [],
       paisSelecionado: '',
       jogadores: [],
