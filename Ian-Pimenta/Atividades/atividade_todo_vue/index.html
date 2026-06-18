@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List com Vue 3</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #42b883;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button.delete-btn {
+            background-color: #ff4d4d;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .concluida {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .task-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
 
+    <div id="app" class="container">
+        <h2>Minha Lista de Tarefas (Vue 3)</h2>
+
+        <div class="input-group">
+            <input 
+                type="text" 
+                v-model="novaTarefa" 
+                @keyup.enter="adicionarTarefa" 
+                placeholder="Digite uma nova tarefa..."
+            >
+            <button @click="adicionarTarefa">Adicionar</button>
+        </div>
+
+        <ul>
+            <li v-for="(tarefa, index) in tarefas" :key="index">
+                
+                <div class="task-content" @click="tarefa.concluida = !tarefa.concluida">
+                    <input type="checkbox" :checked="tarefa.concluida">
+                    <span :class="{ concluida: tarefa.concluida }">
+                        {{ tarefa.texto }}
+                    </span>
+                </div>
+
+                <button class="delete-btn" @click="removerTarefa(index)">Remover</button>
+            </li>
+        </ul>
+
+        <p v-if="tarefas.length === 0" style="color: #666; text-align: center;">
+            Nenhuma tarefa pendente! 🎉
+        </p>
+    </div>
+
+    <script>
+        const { createApp, ref } = Vue;
+
+        createApp({
+            setup()
+                const novaTarefa = ref('');
+      
+                const tarefas = ref([
+                    { texto: 'Estudar as diretivas do Vue 3', concluida: false },
+                    { texto: 'Fazer o commit da atividade', concluida: false }
+                ]);
+
+               
+                const adicionarTarefa = () => {
+                   
+                    if (novaTarefa.value.trim() === '') return;
+                  
+                    tarefas.value.push({
+                        texto: novaTarefa.value,
+                        concluida: false
+                    });
+
+                    novaTarefa.value = '';
+                };
+      
+                const removerTarefa = (index) => {
+                    tarefas.value.splice(index, 1);
+                };
+
+                return {
+                    novaTarefa,
+                    tarefas,
+                    adicionarTarefa,
+                    removerTarefa
+                };
+            }
+        }).mount('#app'); 
+    </script>
+</body>
+</html>
