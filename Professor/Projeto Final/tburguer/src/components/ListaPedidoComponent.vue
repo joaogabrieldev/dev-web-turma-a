@@ -74,17 +74,17 @@ export default {
   },
   methods: {
     async consultarPedidos() {
-      const response = await fetch("http://localhost:3000/pedidos");
+      const response = await fetch(`${this.$apiUrl}/pedidos`);
       const dados = await response.json();
       console.log(dados);
       this.listaPedidosRealizados = dados;
     },
     async consultarStatusPedido() {
-      const response = await fetch("http://localhost:3000/status_pedido");
+      const response = await fetch(`${this.$apiUrl}/status_pedido`);
       this.listaStatusPedido = await response.json();
     },
     async deletarPedido(id) {
-      const response = await fetch(`http://localhost:3000/pedidos/${id}`, {
+      const response = await fetch(`${this.$apiUrl}/pedidos/${id}`, {
         method: "DELETE",
       });
     },
@@ -93,7 +93,7 @@ export default {
 
       const atualizaoJson = JSON.stringify({ statusId: idPedidoAtualizado });
 
-      await fetch(`http://localhost:3000/pedidos/${idPedido}`, {
+      await fetch(`${this.$apiUrl}/pedidos/${idPedido}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: atualizaoJson,
