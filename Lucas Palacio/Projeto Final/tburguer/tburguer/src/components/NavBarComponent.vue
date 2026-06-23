@@ -2,7 +2,7 @@
   <div>
     <nav id="nav">
       <router-link to="/" id="logo-url">
-        <img src="/img/logo_tburguer.png" id="logo" />
+        <img src="/img/logo.svg" id="logo" />
       </router-link>
       <router-link to="/">Home</router-link> |
       <router-link to="/menu">Menu</router-link> |
@@ -34,8 +34,8 @@ export default {
 }
 
 #nav {
-  background-color: #333;
-  border-bottom: darkgoldenrod 4px solid;
+  background-color: #025310;
+  border-bottom: #089246 4px solid;
   padding: 15px 50px;
   display: flex;
   justify-content: flex-end;
@@ -43,7 +43,7 @@ export default {
 }
 
 #nav a {
-  color: darkgoldenrod;
+  color: #4ce085;
   text-decoration: none;
   margin-left: 20px;
   font-size: 18px;

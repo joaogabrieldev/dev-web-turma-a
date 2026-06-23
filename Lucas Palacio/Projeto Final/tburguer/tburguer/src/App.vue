@@ -1,22 +1,18 @@
 <template>
   <div>
     <NavBarComponent />
-    <BannerCompanent/>
+    <BannerComponent />
     <router-view />
-    
   </div>
 </template>
 <script>
-import BannerCompanent from "./components/BannerCompanent.vue";
 import NavBarComponent from "./components/NavBarComponent.vue";
-
+import BannerComponent from "./components/BannerComponent.vue";
 export default {
   name: "App",
   components: {
     NavBarComponent,
-    BannerCompanent,
-    
-    
+    BannerComponent,
   },
 };
 </script>
@@ -26,7 +22,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #000000;
 }
 
 nav {
@@ -35,10 +31,10 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #42cf4e;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #38ac28;
 }
 </style>

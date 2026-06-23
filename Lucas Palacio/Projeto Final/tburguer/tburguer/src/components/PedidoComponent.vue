@@ -1,16 +1,19 @@
 <template>
   <div>
+    <AlertaComponent
+       ref="alertaRef"
+      :tipo="alerta.tipo"
+      :mensagem="alerta.mensagem"
+      :visivel="alerta.visivel"
+    />
     <form id="pedido-form" @submit="criarPedido($event)">
       <div>
-        <p id="nome-hamburguer-content">
-          {{ burguer && burguer.nome ? burguer.nome : "-" }}
+        <p id="nome-cafe-content">
+          {{ cafe && cafe.nome ? cafe.nome : "-" }}
         </p>
-        <img
-          id="foto-content"
-          :src="burguer && burguer.foto ? burguer.foto : ''"
-        />
+        <img id="foto-content" :src="cafe && cafe.foto ? cafe.foto : ''" />
       </div>
-      <div class="inputs">
+      <div class="inputs" id="form-pedido">
         <label for="nome-cliente">Nome</label>
         <input
           type="text"
@@ -21,55 +24,64 @@
         />
       </div>
       <div class="inputs">
-        <label>Ponto da carne</label>
-        <select 
-         name="ponto-carne" 
-         id="ponto-carne" 
-         v-model="pontoCarneSelecionado"
-        >
-          <option value="" selected>Selecione o ponto</option>
+        <label>Tipo de leite</label>
+        <select name="tipo-leite" id="tipo-leite" v-model="tipoLeiteSelecionado">
+          <option value="" selected>Selecione o leite</option>
           <option
-            v-for="pontoCarne in listaPontoCarne"
-            :key="pontoCarne.id"
-            :value="pontoCarne"
+            v-for="tipoLeite in listaTiposLeite"
+            :key="tipoLeite.id"
+            :value="tipoLeite"
           >
-            {{ pontoCarne.descricao }}
+            {{ tipoLeite.descricao }}
+          </option>
+        </select>
+      </div>
+      <div class="inputs">
+        <label>Tamanho</label>
+        <select name="tamanho" id="tamanho" v-model="tamanhoSelecionado">
+          <option value="" selected>Selecione o tamanho</option>
+          <option
+            v-for="tamanho in listaTamanhos"
+            :key="tamanho.id"
+            :value="tamanho"
+          >
+            {{ tamanho.descricao }}
           </option>
         </select>
       </div>
       <div class="inputs">
         <label id="opcionais-titulo"> Selecione os opcionais</label>
-        <label id="opcionais-subtitulo"> Selecione os complementos</label>
+        <label id="opcionais-subtitulo"> Adicione um acompanhamento</label>
 
         <div
           class="checkbox-container"
-          v-for="complemento in listaComplementos"
-          :key="complemento.id"
+          v-for="acompanhamento in listaAcompanhamentos"
+          :key="acompanhamento.id"
         >
           <input
             type="checkbox"
-            :name="complemento.nome"
-            :value="complemento"
-            v-model="listaComplementosSelecionados"
+            :name="acompanhamento.nome"
+            :value="acompanhamento"
+            v-model="listaAcompanhamentosSelecionados"
           />
-          <span>{{ complemento.nome }}</span>
+          <span>{{ acompanhamento.nome }}</span>
         </div>
 
-        <label> Adicione uma bebida</label>
+        <label> Turbine seu café</label>
 
         <div
           class="checkbox-container"
           id="checkbox-container"
-          v-for="bebida in listaBebidas"
-          :key="bebida.id"
+          v-for="adicional in listaAdicionais"
+          :key="adicional.id"
         >
-          <input 
-          type="checkbox" 
-          :name="bebida.nome" 
-          :value="bebida" 
-          v-model="listaBebidasSelecionadas" 
-        />
-          <span>{{ bebida.nome }}</span>
+          <input
+            type="checkbox"
+            :name="adicional.nome"
+            :value="adicional"
+            v-model="listaAdicionaisSelecionados"
+          />
+          <span>{{ adicional.nome }}</span>
         </div>
         <div class="inputs">
           <input type="submit" class="submit-btn" value="Confirmar Pedido" />
@@ -79,59 +91,127 @@
   </div>
 </template>
 <script>
+import AlertaComponent from "@/components/AlertaComponent.vue";
+
 export default {
   name: "PedidoComponent",
+  components: {
+    AlertaComponent,
+  },
   props: {
-    burguer: null,
+    cafe: null,
   },
   data() {
     return {
-      listaPontoCarne: [],
-      listaBebidas: [],
-      listaComplementos: [],
+      listaTiposLeite: [],
+      listaTamanhos: [],
+      listaAcompanhamentos: [],
+      listaAdicionais: [],
       nomeCliente: "",
-      pontoCarneSelecionado: "",
-      listaComplementosSelecionados: [],
-      listaBebidasSelecionadas: [],
+      tipoLeiteSelecionado: "",
+      tamanhoSelecionado: "",
+      listaAcompanhamentosSelecionados: [],
+      listaAdicionaisSelecionados: [],
+      alerta: {
+        visivel: false,
+        tipo: "info",
+        mensagem: "",
+      },
     };
   },
   methods: {
-    async getTipoPontos() {
-      const response = await fetch(`${this.$apiUrl}/tipos_pontos`);
+    mostrarAlerta(tipo, mensagem) {
+  this.alerta = { visivel: true, tipo, mensagem };
+  this.$nextTick(() => {
+    const el = this.$refs.alertaRef.$el;
+    if (el && el.scrollIntoView) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+},
+    async getTiposLeite() {
+      const response = await fetch(`${this.$apiUrl}/tipos_leite`);
       const dados = await response.json();
-      this.listaPontoCarne = dados;
+      this.listaTiposLeite = dados;
+    },
+    async getTamanhos() {
+      const response = await fetch(`${this.$apiUrl}/tamanhos`);
+      const dados = await response.json();
+      this.listaTamanhos = dados;
     },
     async getOpcionais() {
       const response = await fetch(`${this.$apiUrl}/opcionais`);
       const dados = await response.json();
-      this.listaComplementos = dados.complemento;
-      this.listaBebidas = dados.bebidas;
+      this.listaAcompanhamentos = dados.acompanhamentos;
+      this.listaAdicionais = dados.adicionais;
     },
-    async criarPedido(e){
-        e.preventDefault();
-      
+    validarPedido() {
+      if (!this.cafe || !this.cafe.nome) {
+        this.mostrarAlerta(
+          "aviso",
+          "Volte ao Menu e selecione um café antes de continuar."
+        );
+        return false;
+      }
+      if (this.nomeCliente.trim() === "") {
+        this.mostrarAlerta("erro", "Informe o nome do cliente para continuar.");
+        return false;
+      }
+      if (this.tipoLeiteSelecionado === "") {
+        this.mostrarAlerta("erro", "Selecione o tipo de leite do seu café.");
+        return false;
+      }
+      if (this.tamanhoSelecionado === "") {
+        this.mostrarAlerta("erro", "Selecione o tamanho do seu café.");
+        return false;
+      }
+      return true;
+    },
+    async criarPedido(e) {
+      e.preventDefault();
+
+      if (!this.validarPedido()) {
+        return;
+      }
+
       const dadosPedido = {
         nome: this.nomeCliente,
-        ponto: this.pontoCarneSelecionado,
-        bebidas: Array.from(this.listaBebidasSelecionadas),
-        complemento: Array.from(this.listaComplementosSelecionados),
-        burguer: this.burguer,
-        statusId: 5,
+        tipoLeite: this.tipoLeiteSelecionado,
+        tamanho: this.tamanhoSelecionado,
+        acompanhamentos: Array.from(this.listaAcompanhamentosSelecionados),
+        adicionais: Array.from(this.listaAdicionaisSelecionados),
+        cafe: this.cafe,
+        statusId: 1,
       };
-
-      console.log(dadosPedido);
 
       const dadosJson = JSON.stringify(dadosPedido);
 
-      const req = await fetch(`${this.$apiUrl}/pedidos`, {
-        method: "POST",
-        headers: {"Content-Type" : "application/json"},
-        body: dadosJson,
-      });
+      try {
+        const req = await fetch(`${this.$apiUrl}/pedidos`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: dadosJson,
+        });
+
+        if (!req.ok) {
+          throw new Error("Falha ao registrar o pedido");
+        }
+
+        this.mostrarAlerta("sucesso", "Pedido confirmado com sucesso!");
+        setTimeout(() => {
+          this.$router.push("/pedidos");
+        }, 1200);
+      } catch (erro) {
+        this.mostrarAlerta(
+          "erro",
+          "Não foi possível registrar o pedido. Tente novamente."
+        );
+      }
     },
   },
   mounted() {
-    this.getTipoPontos();
+    this.getTiposLeite();
+    this.getTamanhos();
     this.getOpcionais();
   },
 };
@@ -148,19 +228,18 @@ export default {
   object-fit: cover;
 }
 
-#nome-hamburguer-content {
+#nome-cafe-content {
   font-size: 43px;
   font-weight: bold;
   text-align: start;
   margin-bottom: -90px;
   margin-left: 40px;
-  color: antiquewhite;
+  color: #3e2723;
   padding: 16px;
 }
 
 #form-pedido {
   max-width: 750px;
-  margin: 0 auto;
 }
 
 .inputs {
@@ -172,18 +251,18 @@ export default {
 label {
   font-weight: bold;
   margin-bottom: 16px;
-  color: #222;
+  color: #3e2723;
   padding: 5px 12px;
   flex-direction: start;
   display: flex;
-  border-left: 4px solid darkgoldenrod;
+  border-left: 4px solid #b07d4f;
 }
 
 input,
 select {
   padding: 12px;
   width: 300px;
-  border: solid #222 1px;
+  border: solid #3e2723 1px;
   border-radius: 8px;
   height: 20px;
   font-size: 12px;
@@ -217,8 +296,8 @@ select {
 }
 
 .submit-btn {
-  background-color: #222;
-  color: darkgoldenrod;
+  background-color: #3e2723;
+  color: #e0b88a;
   font-weight: bold;
   border: none;
   font-size: 18px;
@@ -232,7 +311,7 @@ select {
 }
 
 .submit-btn:hover {
-  background-color: darkgoldenrod;
-  color: #222;
+  background-color: #b07d4f;
+  color: #3e2723;
 }
 </style>

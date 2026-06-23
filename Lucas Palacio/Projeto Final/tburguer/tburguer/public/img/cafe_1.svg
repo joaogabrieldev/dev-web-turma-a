@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgcafe_1.svg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00704A"/>
+      <stop offset="1" stop-color="#1E3932"/>
+    </linearGradient>
+    <linearGradient id="cupcafe_1.svg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4E9E2"/>
+      <stop offset="1" stop-color="#a8ccbc"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgcafe_1.svg)"/>
+  <!-- Subtle leaf pattern top-left -->
+  <g opacity="0.1" fill="#fff">
+    <ellipse cx="30" cy="30" rx="22" ry="10" transform="rotate(-40 30 30)"/>
+    <ellipse cx="370" cy="40" rx="18" ry="8" transform="rotate(30 370 40)"/>
+    <ellipse cx="360" cy="270" rx="20" ry="9" transform="rotate(-20 360 270)"/>
+  </g>
+  <!-- Gold top accent line -->
+  <line x1="0" y1="0" x2="400" y2="0" stroke="#CBA258" stroke-width="4"/>
+  <!-- Cup group -->
+  <g transform="translate(200,130)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="82" rx="60" ry="10" fill="rgba(0,0,0,0.25)"/>
+    <!-- Cup body -->
+    <path d="M-50,-32 L50,-32 L44,52 Q41,65 27,65 L-27,65 Q-41,65 -44,52 Z" fill="url(#cupcafe_1.svg)"/>
+    <!-- Green band / sleeve -->
+    <path d="M-50,-32 L50,-32 L47,-14 L-47,-14 Z" fill="#1E3932"/>
+    <!-- Coffee inside -->
+    <path d="M-40,-6 Q0,14 40,-6 L36,38 Q34,48 23,48 L-23,48 Q-34,48 -36,38 Z" fill="#2d1a0e"/>
+    <!-- Foam swirl -->
+    <ellipse cx="0" cy="-2" rx="28" ry="6" fill="#c8a882" opacity="0.5"/>
+    <path d="M-12,-4 Q0,4 12,-4" stroke="#e8d5b0" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <!-- Handle -->
+    <path d="M50,-24 Q84,-20 82,10 Q80,36 50,36 L50,24 Q68,24 69,6 Q70,-10 50,-14 Z" fill="url(#cupcafe_1.svg)"/>
+    <!-- Steam -->
+    <path d="M-18,-52 q-8,-12 4,-22 M4,-52 q-8,-12 4,-22 M26,-52 q-8,-12 4,-22"
+          stroke="#CBA258" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <!-- Starbucks-style star on cup -->
+    <circle cx="0" cy="30" r="6" fill="#1E3932" opacity="0.6"/>
+    <polygon points="0,-3 1.7,1.2 6.3,1.2 2.7,3.8 4.0,8.0 0,5.4 -4.0,8.0 -2.7,3.8 -6.3,1.2 -1.7,1.2" transform="translate(0,30) scale(0.55)" fill="#1E3932"/>
+  </g>
+  <!-- Gold divider -->
+  <line x1="60" y1="250" x2="340" y2="250" stroke="#CBA258" stroke-width="1" opacity="0.6"/>
+  <!-- Name -->
+  <text x="200" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#fff" letter-spacing="1">Espresso</text>
+  <!-- Subtitle -->
+  <text x="200" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#CBA258" letter-spacing="4">INTENSO</text>
+</svg>

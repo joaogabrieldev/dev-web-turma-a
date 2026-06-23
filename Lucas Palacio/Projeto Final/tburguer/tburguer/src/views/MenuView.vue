@@ -2,19 +2,15 @@
   <div>
     <h1>Menu</h1>
     <div id="scroll-horizontal">
-      <div
-        id="card-content"
-        v-for="burguer in listaMenuHamburgues"
-        :key="burguer.id"
-      >
+      <div id="card-content" v-for="cafe in listaMenuCafes" :key="cafe.id">
         <div id="card-linha">
-          <div class="foto-hamburguer">
-            <img :src="burguer.foto" alt="nome do burguer" />
+          <div class="foto-cafe">
+            <img :src="cafe.foto" alt="nome do café" />
             <div class="card-coluna">
-              <p id="nome-content">{{ burguer.nome }}</p>
-              <p id="preco-content">R$ {{ burguer.valor }},00</p>
-              <p id="descricao-content">{{ burguer.descricao }}</p>
-              <button @click="selecionarBurguer(burguer)">Selecionar</button>
+              <p id="nome-content">{{ cafe.nome }}</p>
+              <p id="preco-content">R$ {{ cafe.valor }},00</p>
+              <p id="descricao-content">{{ cafe.descricao }}</p>
+              <button @click="selecionarCafe(cafe)">Selecionar</button>
             </div>
           </div>
         </div>
@@ -27,21 +23,20 @@ export default {
   name: "MenuView",
   data() {
     return {
-      listaMenuHamburgues: [],
+      listaMenuCafes: [],
     };
   },
   methods: {
     async consultarMenu() {
       const response = await fetch(`${this.$apiUrl}/menu`);
       const dados = await response.json();
-      this.listaMenuHamburgues = dados.burgues;
-      console.log(this.listaMenuHamburgues);
+      this.listaMenuCafes = dados.cafes;
     },
-    selecionarBurguer(burguerSelecionado){
-        const param = JSON.stringify(burguerSelecionado);
-        const burguerJson = encodeURIComponent(param);
-        this.$router.push({path: '/config', query: {burguer : burguerJson}});
-    }
+    selecionarCafe(cafeSelecionado) {
+      const param = JSON.stringify(cafeSelecionado);
+      const cafeJson = encodeURIComponent(param);
+      this.$router.push({ path: "/config", query: { cafe: cafeJson } });
+    },
   },
   mounted() {
     this.consultarMenu();
@@ -70,7 +65,7 @@ export default {
   box-shadow: inset -10px 0px 15px -15px grey;
 }
 
-.foto-hamburguer img {
+.foto-cafe img {
   width: 100%;
   object-fit: cover;
   max-height: 200px;
@@ -109,7 +104,7 @@ export default {
 .card-coluna button {
   margin-top: auto;
   padding: 10px;
-  background-color: rgb(53, 108, 121);
+  background-color: #b07d4f;
   color: #fff;
   font-weight: bold;
   border-radius: 8px;
@@ -123,8 +118,8 @@ export default {
 
 .card-coluna button:hover {
   background-color: transparent;
-  color: darkslategray;
+  color: #3e2723;
   border-radius: 8px;
-  border: solid 1px rgb(53, 108, 121);
+  border: solid 1px #b07d4f;
 }
 </style>

@@ -8,22 +8,21 @@ const routes = [
     name: 'home',
     component: MenuView
   },
-   {
+  {
     path: '/menu',
     name: 'menu',
     component: MenuView
   },
-   {
+  {
     path: '/pedidos',
     name: 'pedidos',
     component: PedidosView
   },
-   {
+  {
     path: '/config',
     name: 'config',
     component: ConfiguracaoPedidoView
   },
- 
 ]
 
 const router = createRouter({
