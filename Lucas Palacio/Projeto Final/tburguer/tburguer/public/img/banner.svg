@@ -1,14 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#0d3b2a"/><stop offset="1" stop-color="#05130d"/></linearGradient></defs>
-  <rect width="1200" height="300" fill="url(#g)"/>
-  <g opacity=".12" fill="#fff">
-    <circle cx="120" cy="80" r="40"/><circle cx="260" cy="200" r="26"/>
-    <circle cx="980" cy="70" r="30"/><circle cx="1080" cy="220" r="44"/>
+  <defs>
+    <linearGradient id="sbGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1E3932"/>
+      <stop offset="0.5" stop-color="#00704A"/>
+      <stop offset="1" stop-color="#1E3932"/>
+    </linearGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2d5a45" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.2"/>
+    </linearGradient>
+    <!-- Glow radial for logo -->
+    <radialGradient id="logoGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#CBA258" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#CBA258" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Inner cup gradient -->
+    <linearGradient id="cupGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4E9E2"/>
+      <stop offset="1" stop-color="#a8ccbc"/>
+    </linearGradient>
+    <!-- Pulse ring animation filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#sbGrad)"/>
+  <rect width="1200" height="300" fill="url(#shimmer)"/>
+
+  <!-- Decorative leaf patterns -->
+  <g opacity="0.12" fill="#fff">
+    <ellipse cx="80" cy="60" rx="40" ry="18" transform="rotate(-30 80 60)"/>
+    <ellipse cx="130" cy="100" rx="28" ry="12" transform="rotate(20 130 100)"/>
+    <ellipse cx="1100" cy="70" rx="36" ry="16" transform="rotate(40 1100 70)"/>
+    <ellipse cx="1060" cy="220" rx="44" ry="20" transform="rotate(-20 1060 220)"/>
+    <ellipse cx="200" cy="230" rx="32" ry="14" transform="rotate(10 200 230)"/>
+    <ellipse cx="950" cy="260" rx="38" ry="16" transform="rotate(-35 950 260)"/>
   </g>
-  <g transform="translate(150,150)">
-    <path d="M-40,-30 L40,-30 L34,40 Q31,52 20,52 L-20,52 Q-31,52 -34,40 Z" fill="#ffffff"/>
-    <path d="M-40,-30 L40,-30 L37,-12 L-37,-12 Z" fill="#00704A"/>
-    <path d="M40,-22 Q70,-20 68,8 Q66,30 40,30 L40,20 Q58,20 58,4 Q58,-12 40,-12 Z" fill="#ffffff"/>
+
+  <!-- Gold top/bottom lines -->
+  <line x1="0" y1="12" x2="1200" y2="12" stroke="#CBA258" stroke-width="2" opacity="0.6"/>
+  <line x1="0" y1="288" x2="1200" y2="288" stroke="#CBA258" stroke-width="2" opacity="0.6"/>
+
+  <!-- LOGO centered, no text, with effects -->
+  <g transform="translate(600,150)">
+
+    <!-- Outer ambient glow -->
+    <circle r="110" fill="url(#logoGlow)"/>
+
+    <!-- Rotating dashed decorative ring (outer) -->
+    <circle r="82" fill="none" stroke="#CBA258" stroke-width="1" stroke-dasharray="6 5" opacity="0.4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Main emblem circle -->
+    <circle r="70" fill="#1E3932" stroke="#CBA258" stroke-width="3" filter="url(#glow)"/>
+
+    <!-- Inner ring -->
+    <circle r="60" fill="none" stroke="#CBA258" stroke-width="1.2" opacity="0.7"/>
+
+    <!-- Tiny gold dots on inner ring at cardinal points -->
+    <circle cx="0" cy="-60" r="3" fill="#CBA258"/>
+    <circle cx="0" cy="60" r="3" fill="#CBA258"/>
+    <circle cx="-60" cy="0" r="3" fill="#CBA258"/>
+    <circle cx="60" cy="0" r="3" fill="#CBA258"/>
+
+    <!-- Cup body -->
+    <g fill="url(#cupGrad)">
+      <path d="M-22,-26 L22,-26 L18,28 Q16,34 9,34 L-9,34 Q-16,34 -18,28 Z"/>
+    </g>
+
+    <!-- Cup band -->
+    <path d="M-22,-26 L22,-26 L20,-14 L-20,-14 Z" fill="#00704A"/>
+
+    <!-- Coffee inside cup -->
+    <path d="M-18,-6 Q0,10 18,-6 L15,22 Q13,30 7,30 L-7,30 Q-13,30 -15,22 Z" fill="#2d1a0e"/>
+
+    <!-- Foam highlight -->
+    <ellipse cx="0" cy="-5" rx="14" ry="4" fill="#c8a882" opacity="0.45"/>
+
+    <!-- Handle -->
+    <path d="M22,-20 Q40,-18 39,6 Q38,24 22,22 L22,14 Q32,14 33,4 Q34,-8 22,-10 Z" fill="url(#cupGrad)"/>
+
+    <!-- Steam lines animated -->
+    <g stroke="#CBA258" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.75">
+      <path d="M-10,-42 q-6,-10 3,-18">
+        <animate attributeName="opacity" values="0.75;0.2;0.75" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="d" values="M-10,-42 q-6,-10 3,-18;M-10,-44 q-8,-12 3,-20;M-10,-42 q-6,-10 3,-18" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M6,-42 q-6,-10 3,-18">
+        <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="d" values="M6,-42 q-6,-10 3,-18;M6,-44 q-8,-12 3,-20;M6,-42 q-6,-10 3,-18" dur="2.4s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <!-- Subtle shimmer sweep on emblem -->
+    <circle r="70" fill="none" stroke="url(#logoGlow)" stroke-width="20" opacity="0.25">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+    </circle>
+
   </g>
+
 </svg>
