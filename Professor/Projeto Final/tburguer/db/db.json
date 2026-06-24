@@ -45,10 +45,10 @@
   ],
   "pedidos": [
     {
-      "nome": "Fenrando Dias",
+      "nome": "fernando",
       "ponto": {
-        "id": 4,
-        "descricao": "Boi morreu a toa!"
+        "id": 1,
+        "descricao": "Ao ponto"
       },
       "bebidas": [
         {
@@ -78,7 +78,7 @@
         "valor": 35,
         "eh_novidade": true
       },
-      "statusId": "4",
+      "statusId": 5,
       "id": 1
     }
   ],
