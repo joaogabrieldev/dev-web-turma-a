@@ -1,21 +1,30 @@
 <template>
   <div>
     <NavBarComponent />
-    <banner-component />
-  <router-view />
+    <BannerComponent />
+    <div v-if="$route.path === '/'">
+      <VitrineComponent />
+    </div>
+    
+    <router-view />
   </div>
 </template>
+
 <script>
-import NavBarComponent from './components/NavBarComponent.vue';
-import BannerComponent from './components/BannerComponent.vue';
+import NavBarComponent from "./components/NavBarComponent.vue";
+import BannerComponent from "./components/BannerComponent.vue";
+import VitrineComponent from './components/VitrineComponent.vue';
+
 export default {
   name: "App",
-  components:{
+  components: {
     NavBarComponent,
     BannerComponent,
+    VitrineComponent,
   },
-}
+};
 </script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

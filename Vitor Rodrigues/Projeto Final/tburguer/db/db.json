@@ -1,0 +1,140 @@
+{
+  "tipos_pontos": [
+    {
+      "id": "1",
+      "descricao": "Copo Pequeno - 300ml"
+    },
+    {
+      "id": "2",
+      "descricao": "Copo Médio - 500ml"
+    },
+    {
+      "id": "3",
+      "descricao": "Copo Grande - 700ml"
+    },
+    {
+      "id": "4",
+      "descricao": "Tigela Suprema - 1 Litro"
+    }
+  ],
+  "status_pedido": [
+    {
+      "id": "1",
+      "descricao": "Pedido em espera"
+    },
+    {
+      "id": "2",
+      "descricao": "Em produção"
+    },
+    {
+      "id": "3",
+      "descricao": "A caminho"
+    },
+    {
+      "id": "4",
+      "descricao": "Entregue"
+    },
+    {
+      "id": "5",
+      "descricao": "Pedido pendente"
+    },
+    {
+      "id": "6",
+      "descricao": "Pedido realizado"
+    }
+  ],
+  "pedidos": [],
+  "opcionais": {
+    "complemento": [
+      {
+        "id": 1,
+        "nome": "Combo Leite em Pó + Morango Fresco",
+        "descricao": "Porção generosa de leite em pó combinado com morangos frescos cortados na hora.",
+        "foto": "https://images.unsplash.com/photo-1518635017498-87f514b751ba?w=500",
+        "valor": 5,
+        "eh_novidade": true
+      },
+      {
+        "id": 2,
+        "nome": "Nutella Original",
+        "descricao": "Injeção extra de Nutella genuína nas laterais do copo.",
+        "foto": "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?w=500",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Granola Artesanal com Castanhas",
+        "descricao": "Mix de cereais super crocantes, mel e castanhas selecionadas.",
+        "foto": "https://images.unsplash.com/photo-1517093602195-b40af9688b46?w=500",
+        "valor": 3,
+        "eh_novidade": false
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Suco Natural de Laranja 400ml",
+        "descricao": "Suco feito inteiramente da fruta pura, sem adição de açúcar ou água.",
+        "foto": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=500",
+        "valor": 8,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Água de Coco Natural",
+        "descricao": "Super gelada e refrescante.",
+        "foto": "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=500",
+        "valor": 7,
+        "eh_novidade": false
+      }
+    ]
+  },
+  "menu": {
+    "limitado": [
+      {
+        "id": 1,
+        "nome": "Taça Sensação de Inverno",
+        "foto": "https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=600&q=80",
+        "descricao": "Uma combinação exclusiva de açaí cremoso, creme de ninho trufado, calda quente de chocolate e pedaços de brownie artesanal.",
+        "valor": 32,
+        "eh_novidade": true
+      }
+    ],
+    "bases_acai": [
+      {
+        "id": 1,
+        "nome": "Açaí Tradicional Premium",
+        "foto": "/img/acai_premium.webp",
+        "descricao": "Açaí puro batido na consistência perfeita. Sabor marcante e refrescante.",
+        "valor": 18,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Açaí com Creme de Cupuaçu",
+        "foto": "/img/acai_cupuacu.webp",
+        "descricao": "O casamento perfeito do norte: metade açaí tradicional e metade creme de cupuaçu legítimo.",
+        "valor": 21,
+        "eh_novidade": true
+      },
+      {
+        "id": 3,
+        "nome": "Açaí Trufado com Chocolate",
+        "foto": "/img/acai_trufado.webp",
+        "descricao": "Massa de açaí mesclada com uma incrível trufa artesanal de chocolate meio amargo.",
+        "valor": 24,
+        "eh_novidade": true
+      },
+      {
+        "id": 4,
+        "nome": "Açaí Zero Açúcar",
+        "foto": "/img/acai_zero.webp",
+        "descricao": "Formulado especialmente para dietas restritivas, adoçado naturalmente com stevia, mantendo a cremosidade.",
+        "valor": 18,
+        "eh_novidade": false
+      }
+    ]
+  },
+  "$schema": "./node_modules/json-server/schema.json"
+}
