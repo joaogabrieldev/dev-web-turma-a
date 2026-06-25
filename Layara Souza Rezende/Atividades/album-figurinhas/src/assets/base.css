@@ -1,0 +1,28 @@
+:root {
+  --color-bg: #080d15;
+  --color-surface: #0f1820;
+  --color-border: #1a2535;
+  --color-accent: #f5b800;
+  --color-text: #e4eaf4;
+  --color-text-muted: #4d6080;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

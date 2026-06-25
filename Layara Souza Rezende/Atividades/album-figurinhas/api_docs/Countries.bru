@@ -1,0 +1,20 @@
+meta {
+  name: Countries
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/teams/countries
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-apisports-key: {{api_key}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "World Cup Album",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

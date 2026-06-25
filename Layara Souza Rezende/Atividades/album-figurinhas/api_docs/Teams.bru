@@ -1,0 +1,20 @@
+meta {
+  name: Teams
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/teams
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-apisports-key: {{api_key}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

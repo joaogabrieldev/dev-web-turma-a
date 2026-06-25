@@ -1,0 +1,20 @@
+meta {
+  name: Players
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/players/squads
+  body: none
+  auth: inherit
+}
+
+headers {
+  x-apisports-key: {{api_key}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
