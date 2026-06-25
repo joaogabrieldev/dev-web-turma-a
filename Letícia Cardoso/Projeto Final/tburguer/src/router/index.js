@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MenuView from '@/views/MenuView.vue'
-import PedidosView from '@/views/PedidosView.vue'
-import ConfiguracaoPedidoView from '@/views/ConfiguracaoPedidoView.vue'
+import HomeView from '../views/HomeView.vue'
+import MenuView from '../views/MenuView.vue'
+import ConfiguracaoPedidoView from '../views/ConfiguracaoPedidoView.vue'
+import PedidosView from '../views/PedidosView.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'menu',
-    component: MenuView
+    name: 'home',
+    component: HomeView
   },
   {
     path: '/menu',
@@ -15,14 +16,14 @@ const routes = [
     component: MenuView
   },
   {
+    path: '/configuracao',
+    name: 'configuracao',
+    component: ConfiguracaoPedidoView
+  },
+  {
     path: '/pedidos',
     name: 'pedidos',
     component: PedidosView
-  },
-  {
-    path: '/config',
-    name: 'config',
-    component: ConfiguracaoPedidoView
   }
 ]
 

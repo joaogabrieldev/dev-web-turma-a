@@ -1,171 +1,149 @@
 {
-  "tipos_pontos": [
+  "menu": [
     {
-      "id": 1,
-      "descricao": "Ao ponto"
+      "id": "1",
+      "nome": "Cappuccino Trufado",
+      "valor": "16,90",
+      "categoria": "bebidas",
+      "descricao": "Expresso blend da casa, leite cremoso vaporizado e ganache de chocolate belga.",
+      "foto": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop"
     },
     {
-      "id": 2,
-      "descricao": "Bem passada"
+      "id": "2",
+      "nome": "Iced Caramel Latte",
+      "valor": "18,50",
+      "categoria": "bebidas",
+      "descricao": "Café extraído a frio com leite gelado e calda artesanal de caramelo salgado.",
+      "foto": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=600&auto=format&fit=crop"
     },
     {
-      "id": 3,
-      "descricao": "Mal passada"
+      "id": "3",
+      "nome": "Flat White",
+      "valor": "14,90",
+      "categoria": "bebidas",
+      "descricao": "Duplo ristretto com leite integral microespumado para uma textura sedosa e intensa.",
+      "foto": "https://images.unsplash.com/photo-1508452185956-2a463f5cc8c6?q=80&w=600&auto=format&fit=crop"
     },
     {
-      "id": 4,
-      "descricao": "Boi morreu a toa!"
+      "id": "4",
+      "nome": "Matcha Latte",
+      "valor": "17,90",
+      "categoria": "bebidas",
+      "descricao": "Chá verde matcha premium japonês batido com leite vaporizado e uma pitada de baunilha.",
+      "foto": "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "5",
+      "nome": "Croissant de Amêndoas",
+      "valor": "21,00",
+      "categoria": "lanches",
+      "descricao": "Massa folhada francesa crocante, recheada com creme frangipane e amêndoas tostadas.",
+      "foto": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "6",
+      "nome": "Avocado Toast",
+      "valor": "28,00",
+      "categoria": "lanches",
+      "descricao": "Pão de fermentação natural com creme de abacate temperado, ovo poché e tomates-cereja.",
+      "foto": "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "7",
+      "nome": "Espresso Tradicional",
+      "valor": "8,50",
+      "categoria": "bebidas",
+      "descricao": "Café espresso curto e marcante com notas de chocolate e avelã, extraído com grãos selecionados.",
+      "foto": "https://images.unsplash.com/photo-1510972527921-ce03766a1cf1?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "8",
+      "nome": "Pink Lemonade Iced Tea",
+      "valor": "13,90",
+      "categoria": "bebidas",
+      "descricao": "Chá de hibisco gelado batido com limão siciliano espremido na hora e xarope de frutas vermelhas.",
+      "foto": "https://images.unsplash.com/photo-1583898350903-99fa829dad3d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8UGluayUyMGxlbW9uYWRlfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "9",
+      "nome": "Mocha de Chocolate Branco",
+      "valor": "17,50",
+      "categoria": "bebidas",
+      "descricao": "Dose de espresso, leite vaporizado e uma generosa camada de calda de chocolate branco artesanal.",
+      "foto": "https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "10",
+      "nome": "Cold Brew Tônico",
+      "valor": "15,00",
+      "categoria": "bebidas",
+      "descricao": "Café extraído a frio por 18 horas, servido com água tônica premium, gelo e uma rodela de laranja.",
+      "foto": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "11",
+      "nome": "Sanduíche Parma & Rúcula",
+      "valor": "32,00",
+      "categoria": "lanches",
+      "descricao": "Focaccia da casa com presunto de parma, mussarela de búfala fresca, rúcula selvagem e azeite trufado.",
+      "foto": "https://images.unsplash.com/photo-1509722747041-616f39b57569?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "12",
+      "nome": "Grilled Cheese Especial",
+      "valor": "24,50",
+      "categoria": "lanches",
+      "descricao": "Mix de queijo gouda e provolone derretidos no pão de brioche tostado na chapa com manteiga de ervas.",
+      "foto": "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "13",
+      "nome": "Toast de Cogumelos",
+      "valor": "29,00",
+      "categoria": "lanches",
+      "descricao": "Cogumelos Paris e Shimeji salteados no vinho branco com creme de queijo e tomilho no pão levain.",
+      "foto": "https://images.unsplash.com/photo-1708725741805-390cb4f3319f?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "14",
+      "nome": "Torta de Frutas Vermelhas",
+      "valor": "19,90",
+      "categoria": "lanches",
+      "descricao": "Massa sablée crocante recheada com creme de confeiteiro leve e cobertura de frutas vermelhas frescas.",
+      "foto": "https://plus.unsplash.com/premium_photo-1664391694187-0031272a2595?q=80&w=722&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "15",
+      "nome": "Brownie de Chocolate com Nozes",
+      "valor": "14,00",
+      "categoria": "lanches",
+      "descricao": "Brownie denso e super cremoso de chocolate 60% cacau com pedaços crocantes de nozes chilenas.",
+      "foto": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": "16",
+      "nome": "Cheesecake de Frutas Amarelas",
+      "valor": "22,00",
+      "categoria": "lanches",
+      "descricao": "Clássica cheesecake estilo NY com base de biscoito e calda artesanal de maracujá e manga.",
+      "foto": "https://media.istockphoto.com/id/2270395474/pt/foto/close-up-photo-of-lemon-cheesecake-with-berry-coulis-and-basil-garnish.webp?a=1&b=1&s=612x612&w=0&k=20&c=KRtFOYSKDJousWA70180l5KuQTOaG2K2MiVFui7YZ8g="
     }
   ],
-  "status_pedido": [
+  "pedidos": [
     {
-      "id": 1,
-      "descricao": "Pedido em espera"
-    },
-    {
-      "id": 2,
-      "descricao": "Em produção"
-    },
-    {
-      "id": 3,
-      "descricao": "A caminho"
-    },
-    {
-      "id": 4,
-      "descricao": "Entregue"
-    },
-    {
-      "id": 5,
-      "descricao": "Pedido pendente"
-    },
-    {
-      "id": 6,
-      "descricao": "Pedido realizado"
+      "nome_cliente": "Miguelito",
+      "nome_cafe": "Croissant de Amêndoas",
+      "foto_cafe": "https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=600&auto=format&fit=crop",
+      "categoria": "lanches",
+      "tamanho": "Padrão (Porção Individual)",
+      "tipo_leite": "Não se aplica",
+      "opcionais": [],
+      "valor_total": "21,00",
+      "status": "Em preparação",
+      "ponto": "Padrão",
+      "data_pedido": "2026-06-25T02:32:29.361Z",
+      "id": 5
     }
   ],
-  "pedidos": [],
-  "opcionais": {
-    "complemento": [
-      {
-        "id": 1,
-        "nome": "Combo Bebida + Batata",
-        "descricao": "Batata ondulada sequinha e crocante temperada com lemon pepper + bebida de sua escolha",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431534651d7daeba24e_75_75.jpeg",
-        "valor": 11,
-        "eh_novidade": true
-      },
-      {
-        "id": 2,
-        "nome": "Batata ondulada sequinha e crocante temperada com lemon pepper",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431513651d7d99094b6_75_75.jpeg",
-        "valor": 7,
-        "eh_novidade": false
-      }
-    ],
-    "bebidas": [
-      {
-        "id": 1,
-        "nome": "Coca Cola Lata 310 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431408651d7d30645b9_75_75.jpeg",
-        "valor": 6,
-        "eh_novidade": false
-      },
-      {
-        "id": 2,
-        "nome": "Shweppes Citrus 310 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16966989566521924cc9418_75_75.jpeg",
-        "valor": 6,
-        "eh_novidade": false
-      },
-      {
-        "id": 3,
-        "nome": "Coca Cola Zero Lata 310 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431455651d7d5fd3661_75_75.jpeg",
-        "valor": 6,
-        "eh_novidade": false
-      },
-      {
-        "id": 4,
-        "nome": "Del Valle Uva Lata 290 ml",
-        "descricao": "",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431434651d7d4a1e285_75_75.jpeg",
-        "valor": 7,
-        "eh_novidade": false
-      }
-    ]
-  },
-  "menu": {
-    "limitado": [
-      {
-        "id": 1,
-        "nome": "Arretado",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1698926982654391866e311_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, suculento blend de 160 gramas flambado na manteiga de garrafa, coberto de queijo coalho e finalizado com geléia de pimenta Queensberry",
-        "valor": 38,
-        "eh_novidade": true
-      }
-    ],
-    "burgues": [
-      {
-        "id": 1,
-        "nome": "Diretoria Alterado",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429768651d76c8124dc_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, tomate grelhado e defumado na brasa, suculento blend de 160 gramas, queijo derretido na brasa, molho suave de gorgonzola coberto de crispy de alho poró.",
-        "valor": 35,
-        "eh_novidade": true
-      },
-      {
-        "id": 2,
-        "nome": "Veggie",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429812651d76f4d8671_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese secreta, tomate assado e defumado na lenha frutífera, blend de arroz negro, batata baroa e Shimeji 150 gramas grelhado e regado ao azeite , queijo derretido na brasa e molho secreto de cebola caramelizada, tudo preparado com aquele sabor de churrasco.",
-        "valor": 35,
-        "eh_novidade": true
-      },
-      {
-        "id": 3,
-        "nome": "Doritos",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696429871651d772fb9fbe_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial, suculento blend de 160 gramas, queijo cheddar derretido na brasa, cream cheese e Doritos.",
-        "valor": 32,
-        "eh_novidade": true
-      },
-      {
-        "id": 4,
-        "nome": "Campeiro",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696432070651d7fc6b7c98_75_75.jpeg",
-        "descricao": "Delicioso pão de brioche selado na brasa com manteiga de leite, maionese especial de alho e ervas, alface americana fresca e crocante, tomate grelhado e defumado, suculento hambúrguer de 160 gramas, queijo derretido na brasa.",
-        "valor": 30,
-        "eh_novidade": true
-      },
-      {
-        "id": 5,
-        "nome": "Braseirão",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1701549228656b94ac481d3_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, dois suculentos blend's de 160 gramas e queijo mussarela derretido na brasa.",
-        "valor": 30,
-        "eh_novidade": true
-      },
-      {
-        "id": 6,
-        "nome": "Braseiro",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696432090651d7fda3ebe1_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, suculento blend de 160 gramas, triplo queijo cheddar derretido na brasa.",
-        "valor": 20,
-        "eh_novidade": true
-      },
-      {
-        "id": 7,
-        "nome": "Churrasqueto",
-        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16978359266532eb960c34d_75_75.jpeg",
-        "descricao": "Delicioso hambúrguer no pão de brioche selado na brasa, com manteiga de leite, maionese especial com toque de alho e ervas, suculento blend de 120 gramas, triplo queijo cheddar derretido na brasa.",
-        "valor": 15,
-        "eh_novidade": true
-      }
-    ]
-  }
+  "$schema": "./node_modules/json-server/schema.json"
 }

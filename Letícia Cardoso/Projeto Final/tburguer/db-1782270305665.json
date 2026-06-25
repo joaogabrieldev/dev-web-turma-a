@@ -1,0 +1,257 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "nome": "Espresso Tradicional",
+      "valor": "7.00",
+      "categoria": "bebidas",
+      "descricao": "Café espresso curto com blend de grãos 100% arábica.",
+      "foto": "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 2,
+      "nome": "Espresso Macchiato",
+      "valor": "8.50",
+      "categoria": "bebidas",
+      "descricao": "Espresso tradicional com uma leve nuvem de leite vaporizado.",
+      "foto": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 3,
+      "nome": "Café Coado Premium",
+      "valor": "9.00",
+      "categoria": "bebidas",
+      "descricao": "Café extraído na hora no método V60 com notas florais.",
+      "foto": "https://images.pexels.com/photos/2147491/pexels-photo-2147491.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 4,
+      "nome": "Cappuccino Italiano",
+      "valor": "12.00",
+      "categoria": "bebidas",
+      "descricao": "Dose de espresso, leite vaporizado e uma camada cremosa de espuma de leite.",
+      "foto": "https://images.pexels.com/photos/2615323/pexels-photo-2615323.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 5,
+      "nome": "Caffè Latte",
+      "valor": "11.00",
+      "categoria": "bebidas",
+      "descricao": "Equilíbrio perfeito de espresso com bastante leite vaporizado.",
+      "foto": "https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 6,
+      "nome": "Latte Baunilha Artesanal",
+      "valor": "14.50",
+      "categoria": "bebidas",
+      "descricao": "Caffè latte aromatizado com xarope artesanal de baunilha de Madagascar.",
+      "foto": "https://images.pexels.com/photos/5061245/pexels-photo-5061245.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 7,
+      "nome": "Flat White",
+      "valor": "13.00",
+      "categoria": "bebidas",
+      "descricao": "Dose dupla de ristretto com leite vaporizado em textura de microespuma.",
+      "foto": "https://images.pexels.com/photos/1235706/pexels-photo-1235706.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 8,
+      "nome": "Mocha Chocolate Belga",
+      "valor": "16.00",
+      "categoria": "bebidas",
+      "descricao": "Calda de chocolate belga, espresso, leite vaporizado e chantilly.",
+      "foto": "https://images.pexels.com/photos/2159074/pexels-photo-2159074.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 9,
+      "nome": "Caramel Macchiato",
+      "valor": "15.50",
+      "categoria": "bebidas",
+      "descricao": "Leite marcado pelo espresso com um toque sutil de baunilha e calda de caramelo.",
+      "foto": "https://images.pexels.com/photos/3850624/pexels-photo-3850624.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 10,
+      "nome": "Âmbar Toffee Special",
+      "valor": "17.00",
+      "categoria": "bebidas",
+      "descricao": "Bebida assinatura: espresso, leite cremoso, notas de nozes e caramelo toffee.",
+      "foto": "https://images.pexels.com/photos/2396220/pexels-photo-2396220.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 11,
+      "nome": "Iced Latte Clássico",
+      "valor": "13.50",
+      "categoria": "bebidas",
+      "descricao": "Café espresso com leite gelado e cubos de gelo, muito refrescante.",
+      "foto": "https://images.pexels.com/photos/2615311/pexels-photo-2615311.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 12,
+      "nome": "Cold Brew Natural",
+      "valor": "12.00",
+      "categoria": "bebidas",
+      "descricao": "Café extraído a frio por 18 horas, resultando em menor acidez e muita leveza.",
+      "foto": "https://images.pexels.com/photos/4226806/pexels-photo-4226806.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 13,
+      "nome": "Iced Mocha Caramelo",
+      "valor": "16.50",
+      "categoria": "bebidas",
+      "descricao": "Versão gelada do Mocha com calda premium de caramelo e chantilly.",
+      "foto": "https://images.pexels.com/photos/11940333/pexels-photo-11940333.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 14,
+      "nome": "Affogato al Caffè",
+      "valor": "14.00",
+      "categoria": "bebidas",
+      "descricao": "Uma bola de sorvete artesanal de baunilha 'afogada' em um espresso quente.",
+      "foto": "https://images.pexels.com/photos/6065431/pexels-photo-6065431.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 15,
+      "nome": "Matcha Latte",
+      "valor": "15.00",
+      "categoria": "bebidas",
+      "descricao": "Chá verde integral japonês premium misturado ao leite vaporizado.",
+      "foto": "https://images.pexels.com/photos/5946621/pexels-photo-5946621.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 16,
+      "nome": "Chocolate Quente Cremoso",
+      "valor": "13.00",
+      "categoria": "bebidas",
+      "descricao": "Chocolate europeu denso e cremoso com toque de canela.",
+      "foto": "https://images.pexels.com/photos/1824397/pexels-photo-1824397.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 17,
+      "nome": "Croissant de Manteiga",
+      "valor": "11.00",
+      "categoria": "lanches",
+      "descricao": "Folhado francês clássico, crocante por fora e incrivelmente macio por dentro.",
+      "foto": "https://images.pexels.com/photos/372851/pexels-photo-372851.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 18,
+      "nome": "Croissant de Chocolate",
+      "valor": "14.00",
+      "categoria": "lanches",
+      "descricao": "Nosso folhado clássico recheado com bastões de chocolate meio amargo.",
+      "foto": "https://images.pexels.com/photos/3850989/pexels-photo-3850989.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 19,
+      "nome": "Pão de Queijo Mineiro",
+      "valor": "6.50",
+      "categoria": "lanches",
+      "descricao": "Tradicional pão de queijo feito com um blend de queijo canastra e meia cura.",
+      "foto": "https://images.pexels.com/photos/12856484/pexels-photo-12856484.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 20,
+      "nome": "Sanduíche Caprese no Ciabatta",
+      "valor": "22.50",
+      "categoria": "lanches",
+      "descricao": "Ciabatta artesanal, mozzarella de búfala, tomate assado e molho pesto caseiro.",
+      "foto": "https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 21,
+      "nome": "Sanduíche Parma & Brioche",
+      "valor": "26.00",
+      "categoria": "lanches",
+      "descricao": "Pão brioche selado, presunto de parma, queijo brie derretido e rúcula fresquinha.",
+      "foto": "https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 22,
+      "nome": "Donut Gelado de Creme",
+      "valor": "10.00",
+      "categoria": "lanches",
+      "descricao": "Rosquinha artesanal fofinha com cobertura de açúcar e recheio cremoso de baunilha.",
+      "foto": "https://images.pexels.com/photos/1191639/pexels-photo-1191639.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 23,
+      "nome": "Donut Triplo Chocolate",
+      "valor": "11.50",
+      "categoria": "lanches",
+      "descricao": "Massa de cacau, cobertura de chocolate granulado belga e recheio de ganache.",
+      "foto": "https://images.pexels.com/photos/3779791/pexels-photo-3779791.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 24,
+      "nome": "Cinnamon Roll",
+      "valor": "12.50",
+      "categoria": "lanches",
+      "descricao": "Caracol de massa doce folhada com recheio denso de canela e açúcar mascavo, finalizado com glacê.",
+      "foto": "https://images.pexels.com/photos/2673020/pexels-photo-2673020.jpeg?auto=compress&cs=tinysrgb&w=600"
+    },
+    {
+      "id": 25,
+      "nome": "Fatia de Red Velvet",
+      "valor": "16.00",
+      "categoria": "lanches",
+      "descricao": "Bolo aveludado americano com leve toque de cacau e recheio cremoso à base de cream cheese.",
+      "foto": "https://images.pexels.com/photos/4110007/pexels-photo-4110007.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+  ],
+  "tipos_pontos": [
+    {
+      "id": 1,
+      "descricao": "Pequeno (50ml)"
+    },
+    {
+      "id": 2,
+      "descricao": "Médio (150ml)"
+    },
+    {
+      "id": 3,
+      "descricao": "Grande (300ml)"
+    }
+  ],
+  "opcionais": {
+    "complemento": [
+      {
+        "id": 1,
+        "nome": "Chantilly"
+      },
+      {
+        "id": 2,
+        "nome": "Canela em pó"
+      },
+      {
+        "id": 3,
+        "nome": "Xarope de Baunilha"
+      },
+      {
+        "id": 4,
+        "nome": "Calda de Caramelo Extra"
+      },
+      {
+        "id": 5,
+        "nome": "Dose Dupla de Espresso"
+      }
+    ]
+  },
+  "status_pedido": [
+    {
+      "id": 1,
+      "descricao": "Na Fila"
+    },
+    {
+      "id": 2,
+      "descricao": "Em Preparo"
+    },
+    {
+      "id": 3,
+      "descricao": "Pronto para Retirada"
+    }
+  ],
+  "pedidos": []
+}

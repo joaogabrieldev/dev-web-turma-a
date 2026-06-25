@@ -1,103 +1,93 @@
 <template>
   <div>
+    <AlertaComponent :mensagem="alerta.mensagem" :tipo="alerta.tipo" />
+
     <div id="pedidos-tabela">
-      <div>
-        <div id="pedidos-tabela-cabecalho">
-          <div id="ordem-id">#ID</div>
-          <div>Nome</div>
-          <div>Hamburguer</div>
-          <div>Ponto</div>
-          <div>Opcionais</div>
-          <div>Status</div>
-          <div id="div-acoes">Ações</div>
-        </div>
+      <div id="pedidos-tabela-cabecalho">
+        <div id="ordem-id">#ID</div>
+        <div>Cliente</div>
+        <div>Item</div>
+        <div>Preparo</div>
+        <div>Extras</div>
+        <div>Status</div>
+        <div id="div-acoes">Ações</div>
       </div>
     </div>
-    <div
-      class="pedidos-tabela-linha"
-      v-for="pedido in listaPedidosRealizados"
-      :key="pedido.id"
-    >
+
+    <div class="pedidos-tabela-linha" v-for="pedido in listaPedidosRealizados" :key="pedido.id">
       <div id="ordem-numero">{{ pedido.id }}</div>
       <div>{{ pedido.nome }}</div>
-      <div>{{ pedido.burguer.nome }}</div>
-      <div>{{ pedido.ponto.descricao }}</div>
+      <div>{{ pedido.burguer ? pedido.burguer.nome : 'Café Tradicional' }}</div>
+      <div>{{ pedido.ponto ? pedido.ponto.descricao : '-' }}</div>
       <div>
         <ul>
-          <li v-for="(complemento, index) in pedido.complemento" :key="index">
-            {{ complemento.nome }}
-          </li>
-        </ul>
-        <div class="divider"></div>
-        <ul>
-          <li v-for="(bebida, index) in pedido.bebida" :key="index">
-            {{ bebida.nome }}
-          </li>
+          <li v-for="(extra, index) in pedido.complemento" :key="index">{{ extra.nome }}</li>
         </ul>
       </div>
       <div>
-        <select 
-        name="status"
-        class="status"
-        @change="atualizarStatusPedido($event, pedido.id)"
-        > 
-          <option value="">Selecione</option>
-          <option
-            v-for="status in listaStatusPedido"
-            :key="status.id"
-            :value="status.id"
-            :selected="status.id == pedido.statusId"
-          >
+        <select class="status" @change="atualizarStatusPedido($event, pedido.id)">
+          <option v-for="status in listaStatusPedido" :key="status.id" :value="status.id" :selected="status.id == pedido.statusId">
             {{ status.descricao }}
           </option>
         </select>
       </div>
       <div id="div-acoes">
-        <img
-        @click="deletarPedido(pedido.id)"
-         src="/img/icone_lixeira.png" 
-         width="35px" 
-         height="35px" />
+        <img @click="deletarPedido(pedido.id)" src="/img/icone_lixeira.png" width="30px" height="30px" style="cursor:pointer;" />
       </div>
     </div>
   </div>
 </template>
+
 <script>
+import AlertaComponent from './AlertaComponent.vue';
+
 export default {
   name: "ListaPedidoComponent",
+  components: { AlertaComponent },
   data() {
     return {
       listaPedidosRealizados: [],
       listaStatusPedido: [],
+      alerta: { mensagem: "", tipo: "" }
     };
   },
   methods: {
+    exibirAlerta(mensagem, tipo) {
+      this.alerta = { mensagem, tipo };
+      setTimeout(() => { this.alerta = { mensagem: "", tipo: "" }; }, 3500);
+    },
     async consultarPedidos() {
-      const response = await fetch("http://localhost:3000/pedidos");
-      const dados = await response.json();
-      console.log(dados);
-      this.listaPedidosRealizados = dados;
+      const response = await fetch(`${this.$apiUrl}/pedidos`);
+      this.listaPedidosRealizados = await response.json();
     },
     async consultarStatusPedido() {
-      const response = await fetch("http://localhost:3000/status_pedido");
+      const response = await fetch(`${this.$apiUrl}/status_pedido`);
       this.listaStatusPedido = await response.json();
     },
     async deletarPedido(id) {
-        const response = await fetch(`http://localhost:3000/pedidos/${id}`, {
-            method: "DELETE",
-        });
+      if (confirm("Deseja realmente remover este pedido?")) {
+        const response = await fetch(`${this.$apiUrl}/pedidos/${id}`, { method: "DELETE" });
+        
+        if (response.ok) {
+          this.exibirAlerta("Pedido excluído com sucesso!", "aviso"); // Laranja/Aviso de remoção
+          
+          // ATUALIZAÇÃO EM TEMPO REAL: Filtra o array local imediatamente para re-renderizar a tela
+          this.listaPedidosRealizados = this.listaPedidosRealizados.filter(pedido => pedido.id !== id);
+        }
+      }
     },
-    async atualizarStatusPedido(event, idPedido){
-        const idPedidoAtualizado = event.target.value;
+    async atualizarStatusPedido(event, idPedido) {
+      const novoStatus = event.target.value;
+      const response = await fetch(`${this.$apiUrl}/pedidos/${idPedido}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ statusId: novoStatus }),
+      });
 
-        const atualizaoJson = JSON.stringify({statusId : idPedidoAtualizado});
-
-        await fetch(`http://localhost:3000/pedidos/${idPedido}`, {
-            method: "PATCH",
-            headers: {"Content-Type" : "application/json"},
-            body: atualizaoJson,
-        })
-    }
+      if (response.ok) {
+        this.exibirAlerta("Status do pedido atualizado!", "info"); // Azul
+      }
+    },
   },
   mounted() {
     this.consultarPedidos();
@@ -105,40 +95,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-#pedidos-tabela {
-  width: 100%;
-  margin: 0 auto;
-}
-
-#pedidos-tabela-cabecalho,
-#pedidos-tabela-linhas,
-.pedidos-tabela-linha {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#pedidos-tabela-cabecalho {
-  font-weight: bold;
-  padding: 12px;
-  border-bottom: 2px solid #222;
-}
-
-#pedidos-tabela-cabecalho div,
-.pedidos-tabela-linha div {
-  width: 18%;
-}
-
-.pedidos-tabela-linha {
-  width: 100%;
-  padding: 12px;
-  border-bottom: 1px dotted #222;
-}
-
-#pedidos-tabela-cabecalho #ordem-id,
-.pedidos-tabela-linha #ordem-numero,
-.pedidos-tabela-linha #div-acoes,
-#pedidos-tabela-cabecalho #div-acoes {
-  width: 5%;
-}
-</style>

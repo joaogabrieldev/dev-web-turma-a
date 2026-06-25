@@ -1,40 +1,40 @@
 <template>
-  <div>
+  <div id="app-layout">
     <NavBarComponent />
-    <BannerComponent />
-    <router-view />
+    <main class="main-content">
+      <router-view />
+    </main>
   </div>
 </template>
+
 <script>
 import NavBarComponent from "./components/NavBarComponent.vue";
-import BannerComponent from "./components/BannerComponent.vue";
+
 export default {
   name: "App",
   components: {
-    NavBarComponent,
-    BannerComponent,
-  },
+    NavBarComponent
+  }
 };
 </script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #fcfbfa;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.main-content {
+  padding-top: 110px;
+  min-height: calc(100vh - 110px);
 }
 </style>
