@@ -1,1 +1,6 @@
-# dev-web-turma-a
+# dev-web-turma-a 
+
+
+
+# Lucas Kauan
+
