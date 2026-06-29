@@ -1,5 +1,3 @@
-# dev-web-turma-a
-
 # ☕ Cafeteria — Sistema de Pedidos Web
 # Nome do site é starbucks  
 

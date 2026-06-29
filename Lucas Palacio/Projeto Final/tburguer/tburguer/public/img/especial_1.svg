@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bgEsp" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#2c1a06"/>
+      <stop offset="1" stop-color="#1E3932"/>
+    </linearGradient>
+    <linearGradient id="goldEsp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c97a"/>
+      <stop offset="1" stop-color="#CBA258"/>
+    </linearGradient>
+    <linearGradient id="cupEsp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c97a"/>
+      <stop offset="1" stop-color="#b8903a"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bgEsp)"/>
+  <!-- Star sparkle decorations -->
+  <g fill="#CBA258" opacity="0.3">
+    <polygon points="30,20 32,26 38,26 33,30 35,36 30,32 25,36 27,30 22,26 28,26" />
+    <polygon points="370,40 372,46 378,46 373,50 375,56 370,52 365,56 367,50 362,46 368,46" transform="scale(0.7) translate(160,10)"/>
+    <polygon points="360,260 362,266 368,266 363,270 365,276 360,272 355,276 357,270 352,266 358,266" transform="scale(0.6)"/>
+  </g>
+  <!-- Gold top border -->
+  <rect width="400" height="4" fill="url(#goldEsp)"/>
+  <!-- Cup group -->
+  <g transform="translate(200,128)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="82" rx="64" ry="10" fill="rgba(0,0,0,0.35)"/>
+    <!-- Cup body gold -->
+    <path d="M-50,-32 L50,-32 L44,52 Q41,65 27,65 L-27,65 Q-41,65 -44,52 Z" fill="url(#cupEsp)"/>
+    <!-- Band dark -->
+    <path d="M-50,-32 L50,-32 L47,-14 L-47,-14 Z" fill="#2c1a06"/>
+    <!-- Reserve label on band -->
+    <text x="0" y="-19" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#CBA258" letter-spacing="2">RESERVE</text>
+    <!-- Coffee -->
+    <path d="M-40,-6 Q0,14 40,-6 L36,38 Q34,48 23,48 L-23,48 Q-34,48 -36,38 Z" fill="#1a0a02"/>
+    <!-- Ice cream scoop (affogato) -->
+    <ellipse cx="0" cy="-8" rx="26" ry="16" fill="#f5e6cc"/>
+    <ellipse cx="-8" cy="-10" rx="14" ry="10" fill="#fffaf2" opacity="0.8"/>
+    <!-- Gold drizzle -->
+    <path d="M-12,-6 Q-4,2 8,-8 Q16,-14 22,-4" stroke="#CBA258" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.8"/>
+    <!-- Handle gold -->
+    <path d="M50,-24 Q84,-20 82,10 Q80,36 50,36 L50,24 Q68,24 69,6 Q70,-10 50,-14 Z" fill="url(#cupEsp)"/>
+    <!-- Steam -->
+    <path d="M-14,-50 q-6,-10 3,-18 M8,-50 q-6,-10 3,-18" stroke="#CBA258" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+  </g>
+  <!-- Gold divider with star -->
+  <line x1="50" y1="252" x2="172" y2="252" stroke="#CBA258" stroke-width="1" opacity="0.6"/>
+  <polygon points="200,247 202,253 208,253 203,257 205,263 200,259 195,263 197,257 192,253 198,253" fill="#CBA258" opacity="0.9"/>
+  <line x1="228" y1="252" x2="350" y2="252" stroke="#CBA258" stroke-width="1" opacity="0.6"/>
+  <!-- Name -->
+  <text x="200" y="240" text-anchor="middle" font-family="Georgia, serif" font-size="26" font-weight="bold" fill="#e8c97a" letter-spacing="1">Affogato</text>
+  <!-- Subtitle -->
+  <text x="200" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#CBA258" letter-spacing="5">ESPECIAL RESERVE</text>
+</svg>
