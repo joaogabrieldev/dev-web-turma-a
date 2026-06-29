@@ -1,0 +1,25 @@
+.DS_Store
+node_modules
+/dist
+
+# Variáveis de ambiente (a chave da API NUNCA é versionada).
+.env
+.env.development
+.env.production
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editores
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,207 @@
+{
+  "tamanhos": [
+    {
+      "id": 1,
+      "descricao": "Broto"
+    },
+    {
+      "id": 2,
+      "descricao": "Média"
+    },
+    {
+      "id": 3,
+      "descricao": "Grande"
+    },
+    {
+      "id": 4,
+      "descricao": "Família"
+    }
+  ],
+  "status_pedido": [
+    {
+      "id": 1,
+      "descricao": "Em espera"
+    },
+    {
+      "id": 2,
+      "descricao": "Na montagem"
+    },
+    {
+      "id": 3,
+      "descricao": "No forno"
+    },
+    {
+      "id": 4,
+      "descricao": "A caminho"
+    },
+    {
+      "id": 5,
+      "descricao": "Entregue"
+    },
+    {
+      "id": 6,
+      "descricao": "Pendente"
+    }
+  ],
+  "pedidos": [
+    {
+      "nome": "Fernando Dias",
+      "tamanho": {
+        "id": 4,
+        "descricao": "Família"
+      },
+      "bebidas": [
+        {
+          "id": 1,
+          "nome": "Coca Cola Lata 310 ml",
+          "descricao": "",
+          "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431408651d7d30645b9_75_75.jpeg",
+          "valor": 6,
+          "eh_novidade": false
+        }
+      ],
+      "adicionais": [
+        {
+          "id": 1,
+          "nome": "Borda de Catupiry",
+          "descricao": "Borda recheada com catupiry cremoso",
+          "foto": "https://placehold.co/300x200/1E8449/FFF8F0?text=Borda+Catupiry",
+          "valor": 8,
+          "eh_novidade": true
+        }
+      ],
+      "pizza": {
+        "id": 1,
+        "nome": "Margherita",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Margherita",
+        "descricao": "Molho de tomate artesanal, mussarela de búfala, manjericão fresco e um fio de azeite extravirgem.",
+        "valor": 39,
+        "eh_novidade": true
+      },
+      "statusId": "4",
+      "id": 1
+    }
+  ],
+  "opcionais": {
+    "adicionais": [
+      {
+        "id": 1,
+        "nome": "Borda de Catupiry",
+        "descricao": "Borda recheada com catupiry cremoso",
+        "foto": "https://placehold.co/300x200/1E8449/FFF8F0?text=Borda+Catupiry",
+        "valor": 8,
+        "eh_novidade": true
+      },
+      {
+        "id": 2,
+        "nome": "Borda de Cheddar",
+        "descricao": "Borda recheada com cheddar derretido",
+        "foto": "https://placehold.co/300x200/1E8449/FFF8F0?text=Borda+Cheddar",
+        "valor": 8,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Bacon extra",
+        "descricao": "Porção extra de bacon crocante por cima da pizza",
+        "foto": "https://placehold.co/300x200/1E8449/FFF8F0?text=Bacon+Extra",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Azeitona",
+        "descricao": "Azeitonas pretas selecionadas",
+        "foto": "https://placehold.co/300x200/1E8449/FFF8F0?text=Azeitona",
+        "valor": 4,
+        "eh_novidade": false
+      }
+    ],
+    "bebidas": [
+      {
+        "id": 1,
+        "nome": "Coca Cola Lata 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431408651d7d30645b9_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 2,
+        "nome": "Shweppes Citrus 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/16966989566521924cc9418_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Coca Cola Zero Lata 310 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431455651d7d5fd3661_75_75.jpeg",
+        "valor": 6,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Del Valle Uva Lata 290 ml",
+        "descricao": "",
+        "foto": "https://instadelivery-public.nyc3.cdn.digitaloceanspaces.com/itens/1696431434651d7d4a1e285_75_75.jpeg",
+        "valor": 7,
+        "eh_novidade": false
+      }
+    ]
+  },
+  "menu": {
+    "pizzas": [
+      {
+        "id": 1,
+        "nome": "Margherita",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Margherita",
+        "descricao": "Molho de tomate artesanal, mussarela de búfala, manjericão fresco e um fio de azeite extravirgem.",
+        "valor": 39,
+        "eh_novidade": true
+      },
+      {
+        "id": 2,
+        "nome": "Calabresa",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Calabresa",
+        "descricao": "Calabresa fatiada artesanalmente, cebola roxa em rodelas e mussarela derretida sobre molho de tomate.",
+        "valor": 42,
+        "eh_novidade": false
+      },
+      {
+        "id": 3,
+        "nome": "Portuguesa",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Portuguesa",
+        "descricao": "Presunto, ovos cozidos, cebola, ervilha, mussarela e azeitonas pretas. Um clássico completo.",
+        "valor": 45,
+        "eh_novidade": false
+      },
+      {
+        "id": 4,
+        "nome": "Quatro Queijos",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Quatro+Queijos",
+        "descricao": "Mussarela, provolone, parmesão e gorgonzola gratinados no forno a lenha.",
+        "valor": 47,
+        "eh_novidade": true
+      },
+      {
+        "id": 5,
+        "nome": "Frango com Catupiry",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Frango+Catupiry",
+        "descricao": "Frango desfiado temperado, coberto com catupiry cremoso e mussarela.",
+        "valor": 44,
+        "eh_novidade": false
+      },
+      {
+        "id": 6,
+        "nome": "Pepperoni",
+        "foto": "https://placehold.co/300x200/C0392B/FFF8F0?text=Pepperoni",
+        "descricao": "Generosas fatias de pepperoni levemente apimentado sobre mussarela e molho de tomate.",
+        "valor": 46,
+        "eh_novidade": true
+      }
+    ]
+  }
+}
