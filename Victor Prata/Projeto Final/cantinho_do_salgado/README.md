@@ -1,4 +1,4 @@
-# Cantinho do Salgado
+# Cantinho do Salgado - entrega final
 
 Sistema de pedidos online para a loja de salgados **Cantinho do Salgado**, desenvolvido com **Vue 3** como evolução e customização do projeto base T-Burguer.
 
