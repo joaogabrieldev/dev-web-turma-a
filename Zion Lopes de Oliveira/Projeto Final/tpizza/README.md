@@ -24,6 +24,6 @@ No componente ListaPedidoComponent, cada ação gera um feedback visual. A exclu
 
 Link da API: https://api-tburguer-l2we.onrender.com
 
-Link de Produção: https://vercel.com/zion-ls-projects/tpizza e https://tpizza-beige.vercel.app/
+Link de Produção: https://tpizza-beige.vercel.app/ e https://tpizza-beige.vercel.app/
 
 Link do Repositório: https://github.com/Zion-L/tpizza
